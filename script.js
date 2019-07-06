@@ -40,8 +40,8 @@ function incomeHandler() {
     // update total balance
     var updateTotalBalance = Number(totalbalance.textContent.split(" ")[0]) + Number(count.value);
 
-    totalbalance.textContent = income.textContent = "+ " + updateTotalBalance;
-    income.textContent = "+ " + count.value;
+    totalbalance.textContent = income.textContent = updateTotalBalance + " +";
+    income.textContent = count.value + " +";
 
     // create new element to append to income-overview
     var li, span1, span1Text, span2, span2Text;
@@ -53,7 +53,7 @@ function incomeHandler() {
 
     span2 = document.createElement("span");
     span2.className = "amount";
-    span2Text = document.createTextNode("+ " + count.value);
+    span2Text = document.createTextNode(count.value + " +");
     span2.append(span2Text);
 
     li.append(span1);
@@ -87,7 +87,7 @@ function incomeHandler() {
 
 function expenseHandler() {
     // update total balance
-    expense.textContent = "- " + count.value;
+    expense.textContent = count.value + " -";
 
     // create new element to append to expense-overview
     var li, span1, span1Text, span2, span2Text, span2Precent, span2PrecentText;
@@ -99,12 +99,12 @@ function expenseHandler() {
 
     span2 = document.createElement("span");
     span2.className = "amount";
-    span2Text = document.createTextNode("- " + count.value);
+    span2Text = document.createTextNode(count.value + " -");
     span2.append(span2Text);
 
     span2Precent = document.createElement("span");
     span2Precent.className = "precent";
-    var cal = count.value / Number(totalbalance.textContent.split(" ")[1]) * 100;
+    var cal = count.value / Number(totalbalance.textContent.split(" ")[0]) * 100;
     span2PrecentText = document.createTextNode(cal.toFixed("1") + "%");
     span2Precent.append(span2PrecentText);
 
@@ -180,8 +180,8 @@ function getIncomes() {
             outputIncomes += `<li><span>${income.what}</span><span class="amount">+ ${income.count}</span></li>`;
             incomeList.innerHTML = outputIncomes;
         });
-        totalbalance.textContent = "+ " + Number(sumIncome);
-        income.textContent = "+ " + Number(sumIncome);
+        totalbalance.textContent = Number(sumIncome) + " +";
+        income.textContent = Number(sumIncome) + " +";
     }
 }
 
@@ -196,7 +196,7 @@ function getExpenses() {
             expensesList.innerHTML = outputExpenses;
             sumExpenses += (Number(expense.count));
         });
-        expense.innerHTML = "- " + sumExpenses;
+        expense.innerHTML = sumExpenses + " -";
     }
 
     // Wait for select element to change value
