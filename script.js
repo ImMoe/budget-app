@@ -104,7 +104,7 @@ function expenseHandler() {
 
     span2Precent = document.createElement("span");
     span2Precent.className = "precent";
-    var cal = count.value / Number(totalbalance.textContent.split(" ")[0]) * 100;
+    var cal = count.value / Number(totalbalance.textContent.split(" ")[1]) * 100;
     span2PrecentText = document.createTextNode(cal.toFixed("1") + "%");
     span2Precent.append(span2PrecentText);
 
