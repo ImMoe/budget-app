@@ -1,0 +1,176 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f1f1f1;
+}
+
+.mainHeader {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(to right, #141e30c0, #243b55c0), url("https://i.imgur.com/lbeF9O5.png");
+    background-position: center;
+    background-size: cover;
+    padding-top: 50px;
+}
+
+.section-1 {
+    max-width: 40%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-1 > .total-balance {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.section-1 > .income {
+    background-color: #1FCE4E;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6em 1.3rem;
+    margin-top: 0.8em;
+    color: #fff;
+    align-items: center;
+    
+}
+
+.section-1 > .expenses {
+    background-color: #FB2828;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6em 1.3rem;
+    margin-top: 0.6em;
+    color: #fff;
+    align-items: center;
+}
+
+
+.section-1 > .income > p:nth-child(1),
+.section-1 > .expenses > p:nth-child(1) {
+    color: #e5e5e5;
+    font-size: 12px;
+}
+
+.create {
+    width: 100%;
+    background-color: #232323;
+}
+
+.create > .form {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40%;
+    margin: 0 auto;
+    padding: 12px 0;
+}
+
+.create > .form > select {
+    padding: 5px;
+    width: 15%;
+    border: none;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.create > .form > .what,
+.create > .form > .count {
+    padding: 5px 10px;
+    width: 30%;
+    border: none;
+    border-radius: 2px;
+    outline: none;
+    font-size: 12px;
+}
+
+.create > .form > button {
+    padding: 5px 10px;
+    width: 15%;
+    background-color: #1FCE4E;
+    border: none;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 12px;
+}
+
+.overview {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.o-content {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.income-overview, .expense-overview {
+    background-color: #fff;
+    width: 40%;
+    padding: 10px;
+    position: relative;
+    align-self: flex-start;
+}
+
+.income-overview > h3,
+.expense-overview > h3 {
+    text-align: center;
+    font-size: 12px;
+    font-weight: normal;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1
+}
+
+.income-overview > ul,
+.expense-overview > ul {
+    list-style: none;
+}
+
+.income-overview > ul > li,
+.expense-overview > ul > li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f1f1f1;
+    font-size: 12px;
+}
+
+.income-overview > ul > li:last-child,
+.expense-overview > ul > li:last-child {
+    border-bottom: none;
+    padding-bottom: 3px;
+}
+
+.income-overview > ul > li > .amount,
+.expense-overview > ul > li > .amount {
+    display: flex;
+    align-items: center;
+}
+
+.expense-overview > ul > li > .amount > .precent {
+    background-color: red;
+    color: #fff;
+    padding: 5px;
+    font-size: 9px;
+    margin-left: 10px;
+}
+
+.income-overview > ul > li > .amount {
+    color: green;
+}
+
+.expense-overview > ul > li > .amount {
+    color: red;
+}

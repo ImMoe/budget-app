@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Budget App</title>
+</head>
+<body>
+    
+    <header class="mainHeader">
+        <div class="section-1">
+            <!-- Total balance -->
+            <div class="total-balance">
+                0,00 SEK
+            </div>
+            <!-- Income -->
+            <div class="income">
+                <p>Total income</p>
+                <p class="incomeAmount">0,00 SEK</p>
+            </div>
+            <!-- Expenses -->
+            <div class="expenses">
+                <p>Expenses</p>
+                <p class="expensesAmount">0,00 SEK</p>
+            </div>
+        </div>
+    </header>
+    <!-- Add income or expense area -->
+    <section class="create">
+        <div class="form">
+            <select class="option">
+                <option value="default">New</option>
+                <option value="income">+</option>
+                <option value="expense">-</option>
+            </select>
+            <input type="text" class="what" placeholder="Where?">
+            <input type="text" class="count" placeholder="Amount">
+            <button class="submit">Add</button>
+        </div>
+    </section>
+    <!-- Overview of income and expenses -->
+    <section class="overview">
+        <div class="o-content">
+            <div class="income-overview">
+                <h3>Incomes</h3>
+                <ul></ul>
+            </div>
+            <div class="expense-overview">
+                <h3>Expenses</h3>
+                <ul></ul>
+            </div>
+        </div>
+    </section>
+
+</body>
+<script src="script.js"></script>
+</html>
